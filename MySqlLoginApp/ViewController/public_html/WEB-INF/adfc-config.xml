@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <view id="Login">
+    <page>/PagesCreated/Login.jspx</page>
+    <redirect/>
+  </view>
+  <view id="Map">
+    <page>/PagesCreated/map.jspx</page>
+  </view>
+  <view id="HomeFire">
+    <page>/PagesCreated/HomeFire.jspx</page>
+    <redirect/>
+  </view>
+  <view id="Reports">
+    <page>/PagesCreated/Reports.jspx</page>
+    <redirect/>
+  </view>
+  <view id="Feedbacks"></view>
+  <view id="report"></view>
+  <view id="HomeRoad">
+    <page>/PagesCreated/HomeRoad.jspx</page>
+    <redirect/>
+  </view>
+  <view id="HomeAmb">
+    <page>/PagesCreated/HomeAmb.jspx</page>
+    <redirect/>
+  </view>
+  <view id="HomePolice">
+    <page>/PagesCreated/HomePolice.jspx</page>
+    <redirect/>
+  </view>
+  <control-flow-rule id="__8">
+    <from-activity-id>*</from-activity-id>
+    <control-flow-case id="__9">
+      <from-outcome>goLogin</from-outcome>
+      <to-activity-id>Login</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__10">
+      <from-outcome>goMap</from-outcome>
+      <to-activity-id>Map</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__12">
+      <from-outcome>goFire</from-outcome>
+      <to-activity-id>HomeFire</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__14">
+      <from-outcome>getReports</from-outcome>
+      <to-activity-id>Reports</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__15">
+      <from-outcome>getFeedbacks</from-outcome>
+      <to-activity-id>Feedbacks</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__16">
+      <from-outcome>getReport</from-outcome>
+      <to-activity-id>report</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__21">
+      <from-outcome>goRoad</from-outcome>
+      <to-activity-id>HomeRoad</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__22">
+      <from-outcome>goPolice</from-outcome>
+      <to-activity-id>HomePolice</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__23">
+      <from-outcome>goAmbulance</from-outcome>
+      <to-activity-id>HomeAmb</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <managed-bean id="__1">
+    <managed-bean-name>backing_Login</managed-bean-name>
+    <managed-bean-class>view.backing.Login</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/Login.jspx-->
+  </managed-bean>
+  <managed-bean id="__2">
+    <managed-bean-name>backing_mapa</managed-bean-name>
+    <managed-bean-class>view.backing.Mapa</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1mapa.jsf-->
+  </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>backing_mapa2</managed-bean-name>
+    <managed-bean-class>view.backing.Mapa2</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1mapa.jspx-->
+  </managed-bean>
+  <managed-bean id="__4">
+    <managed-bean-name>backing_assem</managed-bean-name>
+    <managed-bean-class>view.backing.Assem</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1assem.jsf-->
+  </managed-bean>
+  <managed-bean id="__7">
+    <managed-bean-name>backing_map</managed-bean-name>
+    <managed-bean-class>view.backing.Map</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/map.jspx-->
+  </managed-bean>
+  <managed-bean id="__11">
+    <managed-bean-name>backing_searchAccounts</managed-bean-name>
+    <managed-bean-class>view.backing.SearchAccounts</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1searchAccounts.jspx-->
+  </managed-bean>
+  <managed-bean id="__5">
+    <managed-bean-name>backing_Home</managed-bean-name>
+    <managed-bean-class>view.backing.Home</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/HomeFire.jspx-->
+  </managed-bean>
+  <managed-bean id="__6">
+    <managed-bean-name>backing_Home2</managed-bean-name>
+    <managed-bean-class>view.backing.Home2</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/HomeFire.jspx-->
+  </managed-bean>
+  <managed-bean id="__13">
+    <managed-bean-name>backing_Home3</managed-bean-name>
+    <managed-bean-class>view.backing.Home</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/HomeFire.jspx-->
+  </managed-bean>
+  <managed-bean id="__17">
+    <managed-bean-name>backing_Login1</managed-bean-name>
+    <managed-bean-class>view.backing.Login1</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1Login1.jspx-->
+  </managed-bean>
+  <managed-bean id="__18">
+    <managed-bean-name>backing_wohoo</managed-bean-name>
+    <managed-bean-class>view.backing.Wohoo</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1wohoo.jsp-->
+  </managed-bean>
+  <managed-bean id="__19">
+    <managed-bean-name>backing_untitled1</managed-bean-name>
+    <managed-bean-class>view.backing.Untitled1</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1untitled1.jspx-->
+  </managed-bean>
+  <managed-bean id="__20">
+    <managed-bean-name>backing_HOME1</managed-bean-name>
+    <managed-bean-class>view.backing.HOME1</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1HOME1.jspx-->
+  </managed-bean>
+  <managed-bean id="__24">
+    <managed-bean-name>backing_HomeRoad</managed-bean-name>
+    <managed-bean-class>view.backing.HomeRoad</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/HomeRoad.jspx-->
+  </managed-bean>
+  <managed-bean id="__25">
+    <managed-bean-name>backing_HomeAmb</managed-bean-name>
+    <managed-bean-class>view.backing.HomeAmb</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/HomeAmb.jspx-->
+  </managed-bean>
+  <managed-bean id="__26">
+    <managed-bean-name>backing_HomePolice</managed-bean-name>
+    <managed-bean-class>view.backing.HomePolice</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/HomePolice.jspx-->
+  </managed-bean>
+  <managed-bean id="__27">
+    <managed-bean-name>backing_untitled2</managed-bean-name>
+    <managed-bean-class>view.backing.Untitled1</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1untitled1.jspx-->
+  </managed-bean>
+  <managed-bean id="__28">
+    <managed-bean-name>backing_PagesCreated_Reports</managed-bean-name>
+    <managed-bean-class>view.backing.Reports</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/Reports.jspx-->
+  </managed-bean>
+  <managed-bean id="__29">
+    <managed-bean-name>backing_PagesCreated_Reports2</managed-bean-name>
+    <managed-bean-class>view.backing.Reports</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/Reports.jspx-->
+  </managed-bean>
+</adfc-config>

@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="Home.jspx" id="d1" binding="#{backingBeanScope.backing_Home.d1}">
+            <af:messages id="m1" binding="#{backingBeanScope.backing_Home.m1}"/>
+            <af:form id="f1" binding="#{backingBeanScope.backing_Home.f1}">
+                <af:panelSplitter orientation="horizontal" splitterPosition="102" id="ps1"
+                                  binding="#{backingBeanScope.backing_Home.ps1}">
+                    <f:facet name="first">
+                        <!-- Left -->
+                        <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_Home.pfl1}"
+                                            inlineStyle="border-left-style:groove;background-color: #DCDCDC;   width: 150px;  ; ">
+                            <f:facet name="footer"/>
+                            <af:button text="Home" id="b1" binding="#{backingBeanScope.backing_Home.b1}"
+                                       inlineStyle="color:#800000; font-family:times; font-size:larger; font-variant:petite-caps; font-variant-caps:titling-caps; background-color:#808080; background-origin:content-box; border-left-width:medium; border-left-style:groove;"
+                                       action="goFire"/>
+                            <af:button text="Reports" id="b3" binding="#{backingBeanScope.backing_Home.b3}"
+                                       inlineStyle="color:#800000; font-family:times; font-size:larger; font-variant:petite-caps; font-variant-caps:titling-caps; background-color:#808080; background-origin:content-box; border-left-width:medium; border-left-style:groove;"
+                                       action="getReports"/>
+                            <af:button text="Feedbacks" id="b4" binding="#{backingBeanScope.backing_Home.b4}"
+                                       inlineStyle="color:#800000; font-family:times; font-size:larger; font-variant:petite-caps; font-variant-caps:titling-caps; background-color:#808080; background-origin:content-box; border-left-width:medium; border-left-style:groove;"
+                                       action="getFeedbacks"/>
+                            <af:button text="About us" id="b2" binding="#{backingBeanScope.backing_Home.b2}"
+                                       inlineStyle="color:#800000; font-family:times; font-size:larger; font-variant:petite-caps; font-variant-caps:titling-caps; background-color:#808080; background-origin:content-box; border-left-width:medium; border-left-style:groove;width:100%px"/>
+                        </af:panelFormLayout>
+                    </f:facet>
+                    <f:facet name="second">
+                        <af:panelGridLayout id="pgl2" binding="#{backingBeanScope.backing_Home.pgl2}">
+                            <af:gridRow height="50px" id="gr1" binding="#{backingBeanScope.backing_Home.gr1}">
+                                <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1"
+                                             binding="#{backingBeanScope.backing_Home.gc1}"
+                                             inlineStyle='src="C:\\Users\\Emy1\\Desktop\\MySqlLoginApp\\ViewController\\public_html\\image\\logo2.png" alt="Mountain View" style="width:204px;height:28px;'>
+                                    <!-- Partial Header -->
+                                    <af:outputText value="#{sessionScope.name}" id="ot1"
+                                                   binding="#{backingBeanScope.backing_Home.ot1}"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow height="100%" id="gr2" binding="#{backingBeanScope.backing_Home.gr2}">
+                                <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc2"
+                                             binding="#{backingBeanScope.backing_Home.gc2}">
+                                    <af:panelGroupLayout layout="scroll" id="pgl1"
+                                                         binding="#{backingBeanScope.backing_Home.pgl1}"
+                                                         inlineStyle="background-color:Maroon;">
+                                        <!-- Content -->
+                                        <dvt:map id="map" startingX="26.8206" mapServerConfigId="mapConfig1"
+                                                 baseMapName="ELOCATION.BI_WORLD_MAP_LIGHT" mapZoom="5"
+                                                 inlineStyle="width:1366px; height:600px;" startingY="30.8025">
+                                            <dvt:mapPointTheme id="mt1" value="#{bindings.ViewFires1.geoMapModel}"
+                                                               clickListener="#{bindings.ViewFires1.geoMapModel.processClickAction}"
+                                                               selectionListener="#{bindings.ViewFires1.geoMapModel.processSelection}">
+                                                <dvt:mapPointStyleItem id="mpsti" isDefault="true"
+                                                                       imageURL="/pictures/fire.png"/>
+                                            </dvt:mapPointTheme>
+                                        </dvt:map>
+                                    </af:panelGroupLayout>
+                                </af:gridCell>
+                            </af:gridRow>
+                        </af:panelGridLayout>
+                    </f:facet>
+                </af:panelSplitter>
+            </af:form>
+        </af:document>
+    </f:view>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_untitled1-->
+</jsp:root>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="map.jspx" id="d1" binding="#{backingBeanScope.backing_map.d1}">
+        
+            <af:messages id="m1" binding="#{backingBeanScope.backing_map.m1}"/>
+            <af:form id="f1" binding="#{backingBeanScope.backing_map.f1}">
+                <dvt:map id="m2" startingX="26.8206"  mapServerConfigId="mapConfig1"
+                                     startingY="30.8025"
+                         baseMapName="ELOCATION.BI_WORLD_MAP_LIGHT" mapZoom="5"
+                         inlineStyle="width:1366px; height:600px;"
+                          binding="#{backingBeanScope.backing_map.m2}">
+                    <dvt:mapPointTheme id="mt1" value="#{bindings.ReportView11.geoMapModel}"
+                                       clickAction="goLogin"
+                                       leftClickBehavior="Action">
+                        <dvt:mapPointStyleItem id="mpsi1" itemValue="fire" imageURL="/pictures/fire.png"/>
+                        <dvt:mapPointStyleItem id="mpsi2" itemValue="road"
+                                               imageURL="/pictures/road.png"/>
+                        <dvt:mapPointStyleItem id="mpsi3" itemValue="ambulance" imageURL="/pictures/ambulance.png"/>
+                        <dvt:mapPointStyleItem id="mpsi4" itemValue="police" imageURL="/pictures/police.png"/>
+                    </dvt:mapPointTheme>
+                                       
+              
+                </dvt:map>
+            </af:form>
+        </af:document>
+    </f:view>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_map-->
+</jsp:root>
