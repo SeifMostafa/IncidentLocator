@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.1.10" id="homePagePageDef"
+                Package="mobile.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="root" RangeSize="25" DataControl="Report" id="ReportIterator"/>
+    <accessorIterator MasterBinding="ReportIterator" Binds="reports" RangeSize="25" DataControl="Report"
+                      BeanClass="application.Report" id="reportsIterator"/>
+    <accessorIterator MasterBinding="reportsIterator" Binds="reports" RangeSize="-1" DataControl="Report"
+                      BeanClass="application.Report" id="reportsIterator1"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="reportsIterator1" id="reports">
+      <nodeDefinition DefName="application.Report" Name="reports0">
+        <AttrNames>
+          <Item Value="longitude"/>
+          <Item Value="latitude"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

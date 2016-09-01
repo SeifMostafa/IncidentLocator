@@ -4,4 +4,5 @@
                    appControllerFolder="ApplicationController" listener-class="application.LifeCycleListenerImpl">
   <adfmf:featureReference refId="AppTaskFlow" id="fr1"/>
   <adfmf:featureReference refId="INCIDENTLOCATOR" id="fr2"/>
+  <adfmf:featureReference refId="showmap" id="fr3"/>
 </adfmf:application>

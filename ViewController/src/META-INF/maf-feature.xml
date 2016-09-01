@@ -7,5 +7,6 @@
     <adfmf:properties id="p1">
       <adfmf:property name="iOSWebView" value="legacy" id="p2"/>
     </adfmf:properties>
+    <adfmf:preferences/>
   </adfmf:feature>
 </adfmf:features>

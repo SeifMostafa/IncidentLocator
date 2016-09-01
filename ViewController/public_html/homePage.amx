@@ -3,6 +3,12 @@
           xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
           
   <amx:panelPage id="pp1">
-    <amx:outputText value="HelloWorld" id="ot1"/>
+    <dvtm:geographicMap id="map1">
+      <dvtm:pointDataLayer value="#{bindings.reports.collectionModel}" id="pdl1" var="row">
+        <dvtm:pointLocation pointX="#{row.latitude}" pointY="#{row.longitude}" id="ptl1" type="pointXY">
+          <dvtm:marker id="mrk1"  />
+        </dvtm:pointLocation>
+      </dvtm:pointDataLayer>
+    </dvtm:geographicMap>
   </amx:panelPage>
 </amx:view>

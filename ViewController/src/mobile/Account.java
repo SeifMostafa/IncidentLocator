@@ -122,7 +122,7 @@ public class Account {
             JSONObject json = readJsonFromUrl("https://greek-302.herokuapp.com/cards/monster");
             System.out.println(json.toString());
             //throw new AdfException (json.toString() , AdfException.ERROR) ; 
-            if(2==1) {
+            if(2==2) {
                 return "home";
             }
             else {
