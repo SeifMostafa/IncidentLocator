@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+  <amx:panelPage id="pp1">
+        
+        <amx:flexLayout id="fl1" orientation="auto" itemAlignment="center" itemFlexibility="flexible">
+    <amx:image id="i1" source="/image/logo2.PNG" >
+                        </amx:image>
+    <amx:commandButton text="Login"  id="signInButton"
+                       inlineStyle="color:#330000; background-color:#cdb99c; font-style:oblique; font-kerning:normal; text-align:left; break-after:right; height:20%; column-width:auto; width:2cm; max-width:none;"
+                       action="signIn">
+        <?audit suppress oracle.maf.warning-missing-shortDesc?>
+      </amx:commandButton>
+    <amx:commandButton text="Sign Up" id="signUpButton"
+                       inlineStyle="color:#330000; background-color:#cdb99c; font-style:oblique; height:20%; width:2cm;"
+                       action="signUp">
+        <?audit suppress oracle.maf.warning-missing-shortDesc?>
+      </amx:commandButton>
+    </amx:flexLayout>
+    
+  </amx:panelPage>
+</amx:view>

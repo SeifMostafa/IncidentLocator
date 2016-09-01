@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="12.2.1.1.20" id="DataBindings"
+             SeparateXMLFiles="false" Package="mobile" ClientType="Generic">
+  <pageMap>
+    <page path="/Login.amx" usageId="mobile_LoginPageDef"/>
+    <page path="/Signup.amx" usageId="mobile_SignupPageDef"/>
+    <page path="/signInPage.amx" usageId="mobile_signInPagePageDef"/>
+    <page path="/signUpPage.amx" usageId="mobile_signUpPagePageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="mobile_LoginPageDef" path="mobile.pageDefs.LoginPageDef"/>
+    <page id="mobile_SignupPageDef" path="mobile.pageDefs.SignupPageDef"/>
+    <page id="mobile_signInPagePageDef" path="mobile.pageDefs.signInPagePageDef"/>
+    <page id="mobile_signUpPagePageDef" path="mobile.pageDefs.signUpPagePageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <dc id="Account" path="mobile.Account"/>
+  </dataControlUsages>
+</Application>

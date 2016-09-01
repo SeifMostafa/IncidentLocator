@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<amx:view xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:amx="http://xmlns.oracle.com/adf/mf/amx"
+          xmlns:dvtm="http://xmlns.oracle.com/adf/mf/amx/dvt">
+<amx:panelPage id="pp1">
+    <amx:accessoryLayout id="al1">
+            <amx:inputText hintText="Email" value="#{bindings.email.inputValue}" simple="true" id="it1"/>
+            <amx:inputText hintText="Password" value="#{bindings.password.inputValue}" simple="true" id="it2"/>
+            <amx:commandButton  text="login"
+            inlineStyle="color:#330000; background-color:#cdb99c; font-style:oblique;"
+                               disabled="#{!bindings.login.enabled}" id="cb1"
+                               action="#{bindings.login.execute}">
+                                <?audit suppress oracle.maf.warning-missing-shortDesc?>
+                        </amx:commandButton>
+        </amx:accessoryLayout>
+  </amx:panelPage>
+  </amx:view>
+
