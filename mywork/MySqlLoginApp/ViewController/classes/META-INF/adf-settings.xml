@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<adf-settings xmlns="http://xmlns.oracle.com/adf/settings">
+  <dvt-faces-settings xmlns="http://xmlns.oracle.com/dss/adf/faces/settings">
+    <geomap id="mapConfig1" mapViewerUrl="map" geocoderUrl="map"/>
+    <geomap id="mapConfig2" mapViewerUrl="map" geocoderUrl="map"/>
+    <geomap id="mapConfig3" mapViewerUrl="mmap" geocoderUrl="mmap"/>
+    <geomap id="mapConfig4" mapViewerUrl="map" geocoderUrl="map"/>
+    <geomap id="mapConfig5" mapViewerUrl="m" geocoderUrl="m"/>
+  </dvt-faces-settings>
+</adf-settings>

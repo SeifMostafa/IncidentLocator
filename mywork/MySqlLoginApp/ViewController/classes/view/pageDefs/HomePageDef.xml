@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.1.20" id="HomePageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ReportView1" RangeSize="-1" DataControl="AppModuleDataControl" id="ReportView1Iterator"/>
+    <iterator Binds="ReportView2_1" RangeSize="-1" DataControl="AppModuleDataControl" id="ReportView2_1Iterator"/>
+    <iterator Binds="ViewFires1" RangeSize="-1" DataControl="AppModuleDataControl" id="ViewFires1Iterator"/>
+  </executables>
+  <bindings>
+    <mapTheme IterBinding="ReportView1Iterator" id="ReportView1" xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <mapThemeDataMap convert="false" mapThemeType="point">
+        <item type="lat_long" longitude="Longitude" latitude="Latitude"/>
+      </mapThemeDataMap>
+    </mapTheme>
+    <mapTheme IterBinding="ReportView2_1Iterator" id="ReportView2_1" xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <mapThemeDataMap convert="false" mapThemeType="point">
+        <item type="lat_long" longitude="Longitude" latitude="Latitude" label="Description"/>
+        <item type="category" value="Type"/>
+      </mapThemeDataMap>
+    </mapTheme>
+    <mapTheme IterBinding="ViewFires1Iterator" id="ViewFires1" xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <mapThemeDataMap convert="false" mapThemeType="point">
+        <item type="lat_long" longitude="Longitude" latitude="Latitude" label="Description"/>
+      </mapThemeDataMap>
+    </mapTheme>
+  </bindings>
+</pageDefinition>

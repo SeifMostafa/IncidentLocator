@@ -7,7 +7,7 @@
     <iterator Binds="ViewCertainReports1" RangeSize="25" DataControl="AppModuleDataControl"
               id="ViewCertainReports1Iterator"/>
     <searchRegion Binds="ViewCertainReports1Iterator" Criteria=""
-                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="ViewCertainReports13Query"/>
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="ViewCertainReports1Query"/>
   </executables>
   <bindings>
     <tree IterBinding="ViewCertainReports1Iterator" id="ViewCertainReports1">
@@ -17,29 +17,12 @@
         </AttrNames>
       </nodeDefinition>
     </tree>
+    <action IterBinding="ViewCertainReports1Iterator" id="setCurrentRowWithKeyValue" RequiresUpdateModel="false"
+            Action="setCurrentRowWithKeyValue">
+      <NamedData NDName="rowKey" NDType="java.lang.String" NDValue="#{row.Description}"/>
+    </action>
     <tree IterBinding="ViewCertainReports1Iterator" id="ViewCertainReports11">
       <nodeDefinition DefName="model.ViewCertainReports" Name="ViewCertainReports110">
-        <AttrNames>
-          <Item Value="Description"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="ViewCertainReports1Iterator" id="ViewCertainReports12">
-      <nodeDefinition DefName="model.ViewCertainReports" Name="ViewCertainReports120">
-        <AttrNames>
-          <Item Value="Description"/>
-          <Item Value="Imageurl"/>
-          <Item Value="Latitude"/>
-          <Item Value="Longitude"/>
-          <Item Value="Priority"/>
-          <Item Value="ReportId"/>
-          <Item Value="Type"/>
-          <Item Value="UserId"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-    <tree IterBinding="ViewCertainReports1Iterator" id="ViewCertainReports13">
-      <nodeDefinition DefName="model.ViewCertainReports" Name="ViewCertainReports130">
         <AttrNames>
           <Item Value="Description"/>
           <Item Value="Imageurl"/>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.1.20" id="mapPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="ReportView1" RangeSize="-1" DataControl="AppModuleDataControl" id="ReportView1Iterator"/>
+  </executables>
+  <bindings>
+    <mapTheme IterBinding="ReportView1Iterator" id="ReportView1" xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <mapThemeDataMap convert="false" mapThemeType="point">
+        <item type="lat_long" longitude="Longitude" latitude="Latitude" label="Description"/>
+      </mapThemeDataMap>
+    </mapTheme>
+    <mapTheme IterBinding="ReportView1Iterator" id="ReportView11" xmlns="http://xmlns.oracle.com/adfm/dvt">
+      <mapThemeDataMap convert="false" mapThemeType="point">
+        <item type="lat_long" longitude="Longitude" latitude="Latitude" label="Description"/>
+        <item type="category" value="Type"/>
+      </mapThemeDataMap>
+    </mapTheme>
+  </bindings>
+</pageDefinition>

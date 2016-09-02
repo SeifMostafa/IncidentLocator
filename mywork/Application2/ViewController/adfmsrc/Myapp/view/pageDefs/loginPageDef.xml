@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.1.20" id="loginPageDef"
+                Package="Myapp.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator id="AccountView1Iterator" Binds="AccountView1" DataControl="AppModuleDataControl" RangeSize="25"/>
+  </executables>
+  <bindings>
+    <action IterBinding="AccountView1Iterator" id="ExecuteWithParams" InstanceName="AppModuleDataControl.AccountView1"
+            DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="executeWithParams">
+      <NamedData NDName="pUsername" NDType="java.lang.String"/>
+      <NamedData NDName="pPaasword" NDType="java.lang.String"/>
+    </action>
+  </bindings>
+</pageDefinition>

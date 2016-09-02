@@ -52,4 +52,11 @@
       Name="ViewCertainReportsCriteria"
       FullName="model.ViewCertainReports.ViewCertainReportsCriteria"/>
   </ViewUsage>
+  <ViewUsage
+    Name="Reports1"
+    ViewObjectName="model.Reports">
+    <ViewCriteriaUsage
+      Name="ReportsCriteria"
+      FullName="model.Reports.ReportsCriteria"/>
+  </ViewUsage>
 </AppModule>
