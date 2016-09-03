@@ -8,7 +8,7 @@
     <page>/PagesCreated/map.jspx</page>
   </view>
   <view id="Home">
-    <page>/PagesCreated/HomeFire.jspx</page>
+    <page>/PagesCreated/Home.jspx</page>
     <redirect/>
   </view>
   <view id="Reports">
@@ -81,7 +81,7 @@
     <managed-bean-name>backing_Home</managed-bean-name>
     <managed-bean-class>view.backing.Home</managed-bean-class>
     <managed-bean-scope>backingBean</managed-bean-scope>
-    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/HomeFire.jspx-->
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/Home.jspx-->
   </managed-bean>
   
   <managed-bean id="__32">

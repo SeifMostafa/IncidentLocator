@@ -111,7 +111,7 @@
       <ViewCriteriaItem
         Name="Type"
         ViewAttribute="Type"
-        Operator="CONTAINS"
+        Operator="="
         Conjunction="AND"
         Value=":pType"
         IsBindVarValue="true"

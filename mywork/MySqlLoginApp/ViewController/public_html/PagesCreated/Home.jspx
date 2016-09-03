@@ -33,7 +33,7 @@
                                              binding="#{backingBeanScope.backing_Home.gc1}"
                                              inlineStyle='src="C:\\Users\\Emy1\\Desktop\\MySqlLoginApp\\ViewController\\public_html\\image\\logo2.png" alt="Mountain View" style="width:204px;height:28px;'>
                                     <!-- Partial Header -->
-                                    <af:outputText value="#{sessionScope.name}" id="ot1"
+                                    <af:outputText value="#{sessionScope.type}" id="ot1"
                                                    binding="#{backingBeanScope.backing_Home.ot1}"/>
                                 </af:gridCell>
                             </af:gridRow>

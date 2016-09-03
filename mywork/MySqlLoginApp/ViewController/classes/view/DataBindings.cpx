@@ -11,7 +11,7 @@
     <page path="/assem.jsf" usageId="view_assemPageDef"/>
     <page path="/PagesCreated/map.jspx" usageId="view_mapPageDef"/>
     <page path="/searchAccounts.jspx" usageId="view_searchAccountsPageDef"/>
-    <page path="/PagesCreated/HomeFire.jspx" usageId="view_HomePageDef"/>
+    <page path="/PagesCreated/Home.jspx" usageId="view_HomePageDef"/>
     <page path="/PagesCreated/HomeAmb.jspx" usageId="view_HomeAmbPageDef"/>
     <page path="/PagesCreated/HomePolice.jspx" usageId="view_HomePolicePageDef"/>
     <page path="/PagesCreated/HomeRoad.jspx" usageId="view_HomeRoadPageDef"/>

@@ -78,7 +78,7 @@
       <property
          name="y">270.68945</property>
       <property
-         name="page">/PagesCreated/HomeFire.jspx</property>
+         name="page">/PagesCreated/Home.jspx</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -182,17 +182,6 @@
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
-      id="ControlFlowCase28"
-      from="MethodCall22">
-      <property
-         name="tosrcid">__34</property>
-      <property
-         name="fromOutcome">ExecuteWithParams</property>
-      <property
-         name="fromsrcid">__33</property>
-   </ControlFlowCase>
-   <ControlFlowCase
-      islink="true"
       id="ControlFlowCase29"
       from="MethodCall22"
       to="View8">
@@ -200,5 +189,16 @@
          name="fromOutcome">ExecuteWithParams</property>
       <property
          name="sdm:polyPoints">L50,-163.64844,261.99414,-331.0,270.33887,R50</property>
+   </ControlFlowCase>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase20"
+      from="MethodCall22">
+      <property
+         name="tosrcid">__34</property>
+      <property
+         name="fromOutcome">ExecuteWithParams</property>
+      <property
+         name="fromsrcid">__33</property>
    </ControlFlowCase>
 </SDM>
