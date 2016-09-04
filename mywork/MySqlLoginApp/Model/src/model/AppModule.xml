@@ -18,34 +18,6 @@
     Name="ReportView1"
     ViewObjectName="model.ReportView"/>
   <ViewUsage
-    Name="ViewRoads1"
-    ViewObjectName="model.ViewRoads">
-    <ViewCriteriaUsage
-      Name="ViewRoadsCriteria"
-      FullName="model.ViewRoads.ViewRoadsCriteria"/>
-  </ViewUsage>
-  <ViewUsage
-    Name="ViewFires1"
-    ViewObjectName="model.ViewFires">
-    <ViewCriteriaUsage
-      Name="ViewFiresCriteria"
-      FullName="model.ViewFires.ViewFiresCriteria"/>
-  </ViewUsage>
-  <ViewUsage
-    Name="ViewAmbulances1"
-    ViewObjectName="model.ViewAmbulances">
-    <ViewCriteriaUsage
-      Name="ViewAmbulancesCriteria"
-      FullName="model.ViewAmbulances.ViewAmbulancesCriteria"/>
-  </ViewUsage>
-  <ViewUsage
-    Name="ViewPolice1"
-    ViewObjectName="model.ViewPolice">
-    <ViewCriteriaUsage
-      Name="ViewPoliceCriteria"
-      FullName="model.ViewPolice.ViewPoliceCriteria"/>
-  </ViewUsage>
-  <ViewUsage
     Name="ViewCertainReports1"
     ViewObjectName="model.ViewCertainReports">
     <ViewCriteriaUsage
@@ -58,5 +30,12 @@
     <ViewCriteriaUsage
       Name="ReportsCriteria"
       FullName="model.Reports.ReportsCriteria"/>
+  </ViewUsage>
+  <ViewUsage
+    Name="ReportViewID1"
+    ViewObjectName="model.ReportViewID">
+    <ViewCriteriaUsage
+      Name="ReportViewIDCriteria"
+      FullName="model.ReportViewID.ReportViewIDCriteria"/>
   </ViewUsage>
 </AppModule>

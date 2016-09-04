@@ -22,8 +22,9 @@ public class Reports {
     private RichForm f2;
     private RichTable t2;
     private RichButton b1;
-
-
+    public String doAction() {
+        return "getReport";
+    }
     public void setD1(RichDocument d1) {
         this.d1 = d1;
     }
@@ -80,7 +81,7 @@ public class Reports {
         
         Row selectedRow =
                     (Row)ADFUtil.evaluateEL("#{bindings.ViewCertainReports1Iterator.currentRow}");
-        ADFUtil.setEL("#{pageFlowScope.reportId}", selectedRow.getAttribute("ReportId"));
+        ADFUtil.setEL("#{sessionScope.reportid}", selectedRow.getAttribute("ReportId"));
         ActionEvent actionEvent = new ActionEvent(b1);
         actionEvent.queue();
                 

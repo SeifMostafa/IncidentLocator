@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.1.20"
+                id="adfc_config___methodCall1PageDef" Package="view.pageDefs" SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="ReportViewID1" RangeSize="25" DataControl="AppModuleDataControl" id="ReportViewID1Iterator"
+              Refresh="never"/>
+  </executables>
+  <bindings>
+    <action IterBinding="ReportViewID1Iterator" id="ExecuteWithParams" RequiresUpdateModel="true"
+            Action="executeWithParams">
+      <NamedData NDName="pReportid" NDValue="#{sessionScope.reportid}" NDType="java.lang.Integer"/>
+    </action>
+  </bindings>
+</pageDefinition>

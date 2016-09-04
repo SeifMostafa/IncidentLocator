@@ -24,6 +24,12 @@
       <fixed-outcome>ExecuteWithParams</fixed-outcome>
     </outcome>
   </method-call>
+  <method-call id="filter">
+    <method>#{bindings.ExecuteWithParams.execute}</method>
+    <outcome>
+      <fixed-outcome>ExecuteWithParams</fixed-outcome>
+    </outcome>
+  </method-call>
   <control-flow-rule id="__8">
     <from-activity-id>*</from-activity-id>
     <control-flow-case id="__9">
@@ -33,22 +39,6 @@
     <control-flow-case id="__10">
       <from-outcome>goMap</from-outcome>
       <to-activity-id>Map</to-activity-id>
-    </control-flow-case>
-    <control-flow-case id="__14">
-      <from-outcome>getReports</from-outcome>
-      <to-activity-id>Reports</to-activity-id>
-    </control-flow-case>
-    <control-flow-case id="__15">
-      <from-outcome>getFeedbacks</from-outcome>
-      <to-activity-id>Feedbacks</to-activity-id>
-    </control-flow-case>
-    <control-flow-case id="__16">
-      <from-outcome>getReport</from-outcome>
-      <to-activity-id>report</to-activity-id>
-    </control-flow-case>
-    <control-flow-case id="__23">
-      <from-outcome>goHome</from-outcome>
-      <to-activity-id>ExecuteWithParams</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
   <control-flow-rule id="__33">
@@ -60,6 +50,38 @@
     <control-flow-case id="__2">
       <from-outcome>ExecuteWithParams</from-outcome>
       <to-activity-id>Home</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__3">
+    <from-activity-id>Home</from-activity-id>
+    <control-flow-case id="__4">
+      <from-outcome>getReports</from-outcome>
+      <to-activity-id>Reports</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__6">
+      <from-outcome>getFeedbacks</from-outcome>
+      <to-activity-id>Feedbacks</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__11">
+    <from-activity-id>Reports</from-activity-id>
+    <control-flow-case id="__12">
+      <from-outcome>getReport</from-outcome>
+      <to-activity-id>filter</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__13">
+    <from-activity-id>Login</from-activity-id>
+    <control-flow-case id="__14">
+      <from-outcome>goHome</from-outcome>
+      <to-activity-id>ExecuteWithParams</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__15">
+    <from-activity-id>filter</from-activity-id>
+    <control-flow-case id="__16">
+      <from-outcome>ExecuteWithParams</from-outcome>
+      <to-activity-id>report</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
   <managed-bean id="__1">

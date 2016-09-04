@@ -220,7 +220,7 @@
                         <af:gridCell marginStart="5px" width="20%" id="gc88"
                                      binding="#{backingBeanScope.backing_Login.gc88}">
                             <af:inputText label="Username" id="it1" binding="#{backingBeanScope.backing_Login.it1}"
-                                          showRequired="true" requiredMessageDetail="Required"/>
+                                          showRequired="true" requiredMessageDetail="Required" required="true"/>
                         </af:gridCell>
                         <af:gridCell marginStart="5px" width="20%" id="gc89"
                                      binding="#{backingBeanScope.backing_Login.gc89}"/>
@@ -240,7 +240,8 @@
                         <af:gridCell marginStart="5px" width="20%" id="gc95"
                                      binding="#{backingBeanScope.backing_Login.gc95}">
                             <af:inputText label="Password" id="it2" binding="#{backingBeanScope.backing_Login.it2}"
-                                          secret="true" showRequired="true" requiredMessageDetail="required"/>
+                                          secret="true" showRequired="true" requiredMessageDetail="required"
+                                          required="true"/>
                         </af:gridCell>
                         <af:gridCell marginStart="5px" width="20%" id="gc96"
                                      binding="#{backingBeanScope.backing_Login.gc96}"/>

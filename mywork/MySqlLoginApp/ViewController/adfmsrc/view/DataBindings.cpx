@@ -20,6 +20,7 @@
     <page path="/PagesCreated/Reports.jspx" usageId="view_ReportsPageDef1"/>
     <page path="PageFlow#ExecuteWithParams" usageId="view_adfc_config___ExecuteWithParamsPageDef"/>
     <page path="/Homegdeda.jspx" usageId="view_HomegdedaPageDef"/>
+    <page path="PageFlow#filter" usageId="view_adfc_config___methodCall1PageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_LoginPageDef" path="view.pageDefs.LoginPageDef"/>
@@ -36,6 +37,7 @@
     <page id="view_ReportsPageDef1" path="view.pageDefs.ReportsPageDef"/>
     <page id="view_adfc_config___ExecuteWithParamsPageDef" path="view.pageDefs.adfc_config___ExecuteWithParamsPageDef"/>
     <page id="view_HomegdedaPageDef" path="view.pageDefs.HomegdedaPageDef"/>
+    <page id="view_adfc_config___methodCall1PageDef" path="view.pageDefs.adfc_config___methodCall1PageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"

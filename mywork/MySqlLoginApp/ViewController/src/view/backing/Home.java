@@ -31,7 +31,8 @@ public class Home {
     private RichMessages m1;
     private UIGeoMap map;
     private RichOutputText ot1;
-
+    
+    
     public void setPgl1(RichPanelGroupLayout pgl1) {
         this.pgl1 = pgl1;
     }
