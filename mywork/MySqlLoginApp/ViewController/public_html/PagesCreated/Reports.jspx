@@ -6,21 +6,29 @@
         <af:document title="Reports.jspx" id="d1" binding="#{backingBeanScope.backing_PagesCreated_Reports3.d1}">
             <af:messages id="m1" binding="#{backingBeanScope.backing_PagesCreated_Reports3.m1}"/>
             <af:form id="f2" binding="#{backingBeanScope.backing_PagesCreated_Reports3.f2}">
-                <af:table value="#{bindings.ViewCertainReports11.collectionModel}" var="row"
-                          rows="#{bindings.ViewCertainReports11.rangeSize}"
-                          emptyText="#{bindings.ViewCertainReports11.viewable ? 'No data to display.' : 'Access Denied.'}"
-                          rowBandingInterval="0"
-                          selectedRowKeys="#{bindings.ViewCertainReports11.collectionModel.selectedRow}"
-                          selectionListener="#{backingBeanScope.backing_PagesCreated_Reports3.tableSL}"
-                          rowSelection="single" fetchSize="#{bindings.ViewCertainReports11.rangeSize}" id="t2"
-                          binding="#{backingBeanScope.backing_PagesCreated_Reports3.t2}">
-                    <af:column headerText="#{bindings.ViewCertainReports11.hints.Description.label}" id="c1">
-                        <af:outputText value="#{row.Description}"
-                                       shortDesc="#{bindings.ViewCertainReports11.hints.Description.tooltip}" id="ot1"/>
-                    </af:column>
-                </af:table>
+                
                 <af:button text="button 1" id="b1" binding="#{backingBeanScope.backing_PagesCreated_Reports3.b1}"
                            visible="false"/>
+                <af:table value="#{bindings.Reports1.collectionModel}" var="row" rows="#{bindings.Reports1.rangeSize}"
+                          emptyText="#{bindings.Reports1.viewable ? 'No data to display.' : 'Access Denied.'}"
+                          rowBandingInterval="0" selectedRowKeys="#{bindings.Reports1.collectionModel.selectedRow}"
+                          selectionListener="#{backingBeanScope.backing_PagesCreated_Reports3.tableSL}" rowSelection="single"
+                          fetchSize="#{bindings.Reports1.rangeSize}" id="t2"
+                          binding="#{backingBeanScope.backing_PagesCreated_Reports3.t2}">
+                    <af:column sortProperty="#{bindings.Reports1.hints.Description.name}" sortable="true"
+                               headerText="#{bindings.Reports1.hints.Description.label}" id="c1">
+                        <af:outputText value="#{row.Description}"
+                                       shortDesc="#{bindings.Reports1.hints.Description.tooltip}" id="ot1"/>
+                    </af:column>
+                    <af:column sortProperty="#{bindings.Reports1.hints.Priority.name}" sortable="true"
+                               headerText="#{bindings.Reports1.hints.Priority.label}" id="c2">
+                        <af:outputText value="#{row.Priority}" shortDesc="#{bindings.Reports1.hints.Priority.tooltip}"
+                                       id="ot2">
+                            <af:convertNumber groupingUsed="false"
+                                              pattern="#{bindings.Reports1.hints.Priority.format}"/>
+                        </af:outputText>
+                    </af:column>
+                </af:table>
             </af:form>
         </af:document>
     </f:view>

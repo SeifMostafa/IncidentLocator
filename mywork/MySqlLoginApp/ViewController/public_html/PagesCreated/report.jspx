@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="report.jspx" id="d1" binding="#{backingBeanScope.backing_PagesCreated_report.d1}">
+            <af:messages id="m1" binding="#{backingBeanScope.backing_PagesCreated_report.m1}"/>
+            <af:form id="f1" binding="#{backingBeanScope.backing_PagesCreated_report.f1}">
+                <af:panelSplitter orientation="horizontal" splitterPosition="100" positionedFromEnd="true" id="ps1"
+                                  binding="#{backingBeanScope.backing_PagesCreated_report.ps1}">
+                    <f:facet name="first">
+                        <af:panelSplitter orientation="vertical" splitterPosition="50" id="ps2"
+                                          binding="#{backingBeanScope.backing_PagesCreated_report.ps2}">
+                            <f:facet name="first"/>
+                            <f:facet name="second">
+                                <af:panelGroupLayout layout="scroll" id="pgl1"
+                                                     binding="#{backingBeanScope.backing_PagesCreated_report.pgl1}">
+                                    <dvt:map id="map" startingX="0.0" mapServerConfigId="mapConfig1"
+                                             baseMapName="ELOCATION.BI_WORLD_MAP_LIGHT" mapZoom="0"
+                                             inlineStyle="width:600px; height:375px;" startingY="0.0"
+                                             binding="#{backingBeanScope.backing_PagesCreated_report.map}">
+                                        <dvt:mapPointTheme id="mt1" value="#{bindings.ReportViewID1.geoMapModel}"
+                                                           clickListener="#{bindings.ReportViewID1.geoMapModel.processClickAction}"
+                                                           selectionListener="#{bindings.ReportViewID1.geoMapModel.processSelection}"/>
+                                    </dvt:map>
+                                </af:panelGroupLayout>
+                            </f:facet>
+                        </af:panelSplitter>
+                    </f:facet>
+                    <f:facet name="second"/>
+                </af:panelSplitter>
+            </af:form>
+        </af:document>
+    </f:view>
+    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_PagesCreated_report-->
+</jsp:root>

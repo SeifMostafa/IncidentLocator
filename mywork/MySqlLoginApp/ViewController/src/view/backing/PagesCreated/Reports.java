@@ -22,6 +22,7 @@ public class Reports {
     private RichForm f2;
     private RichTable t2;
     private RichButton b1;
+
     public String doAction() {
         return "getReport";
     }
@@ -96,4 +97,6 @@ public class Reports {
     public RichButton getB1() {
         return b1;
     }
+
+   
 }

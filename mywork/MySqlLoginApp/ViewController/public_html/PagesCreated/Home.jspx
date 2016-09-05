@@ -15,7 +15,7 @@
                             <f:facet name="footer"/>
                             <af:button text="Home" id="b1" binding="#{backingBeanScope.backing_Home.b1}"
                                        inlineStyle="color:#800000; font-family:times; font-size:larger; font-variant:petite-caps; font-variant-caps:titling-caps; background-color:#808080; background-origin:content-box; border-left-width:medium; border-left-style:groove;"
-                                       action="goFire"/>
+                                       action="refresh"/>
                             <af:button text="Reports" id="b3" binding="#{backingBeanScope.backing_Home.b3}"
                                        inlineStyle="color:#800000; font-family:times; font-size:larger; font-variant:petite-caps; font-variant-caps:titling-caps; background-color:#808080; background-origin:content-box; border-left-width:medium; border-left-style:groove;"
                                        action="getReports"/>

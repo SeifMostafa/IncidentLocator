@@ -16,7 +16,10 @@
     <redirect/>
   </view>
   <view id="Feedbacks"></view>
-  <view id="report"></view>
+  <view id="report">
+    <page>/PagesCreated/report.jspx</page>
+    <redirect/>
+  </view>
     
   <method-call id="ExecuteWithParams">
     <method>#{bindings.ExecuteWithParams.execute}</method>
@@ -30,17 +33,6 @@
       <fixed-outcome>ExecuteWithParams</fixed-outcome>
     </outcome>
   </method-call>
-  <control-flow-rule id="__8">
-    <from-activity-id>*</from-activity-id>
-    <control-flow-case id="__9">
-      <from-outcome>goLogin</from-outcome>
-      <to-activity-id>Login</to-activity-id>
-    </control-flow-case>
-    <control-flow-case id="__10">
-      <from-outcome>goMap</from-outcome>
-      <to-activity-id>Map</to-activity-id>
-    </control-flow-case>
-  </control-flow-rule>
   <control-flow-rule id="__33">
     <from-activity-id>ExecuteWithParams</from-activity-id>
     <control-flow-case id="__34">
@@ -50,17 +42,6 @@
     <control-flow-case id="__2">
       <from-outcome>ExecuteWithParams</from-outcome>
       <to-activity-id>Home</to-activity-id>
-    </control-flow-case>
-  </control-flow-rule>
-  <control-flow-rule id="__3">
-    <from-activity-id>Home</from-activity-id>
-    <control-flow-case id="__4">
-      <from-outcome>getReports</from-outcome>
-      <to-activity-id>Reports</to-activity-id>
-    </control-flow-case>
-    <control-flow-case id="__6">
-      <from-outcome>getFeedbacks</from-outcome>
-      <to-activity-id>Feedbacks</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
   <control-flow-rule id="__11">
@@ -82,6 +63,32 @@
     <control-flow-case id="__16">
       <from-outcome>ExecuteWithParams</from-outcome>
       <to-activity-id>report</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__19">
+    <from-activity-id>*</from-activity-id>
+    <control-flow-case id="__6">
+      <from-outcome>goMap</from-outcome>
+      <to-activity-id>Map</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__9">
+      <from-outcome>goLogin</from-outcome>
+      <to-activity-id>Login</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__3">
+    <from-activity-id>Home</from-activity-id>
+    <control-flow-case id="__10">
+      <from-outcome>getFeedbacks</from-outcome>
+      <to-activity-id>Feedbacks</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__18">
+      <from-outcome>getReports</from-outcome>
+      <to-activity-id>Reports</to-activity-id>
+    </control-flow-case>
+    <control-flow-case id="__20">
+      <from-outcome>refresh</from-outcome>
+      <to-activity-id>Home</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
   <managed-bean id="__1">
@@ -111,5 +118,11 @@
     <managed-bean-class>view.backing.PagesCreated.Reports</managed-bean-class>
     <managed-bean-scope>backingBean</managed-bean-scope>
     <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/Reports.jspx-->
+  </managed-bean>
+  <managed-bean id="__17">
+    <managed-bean-name>backing_PagesCreated_report</managed-bean-name>
+    <managed-bean-class>view.backing.PagesCreated.Report</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/report.jspx-->
   </managed-bean>
 </adfc-config>

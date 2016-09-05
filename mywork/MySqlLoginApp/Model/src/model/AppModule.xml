@@ -18,13 +18,6 @@
     Name="ReportView1"
     ViewObjectName="model.ReportView"/>
   <ViewUsage
-    Name="ViewCertainReports1"
-    ViewObjectName="model.ViewCertainReports">
-    <ViewCriteriaUsage
-      Name="ViewCertainReportsCriteria"
-      FullName="model.ViewCertainReports.ViewCertainReportsCriteria"/>
-  </ViewUsage>
-  <ViewUsage
     Name="Reports1"
     ViewObjectName="model.Reports">
     <ViewCriteriaUsage
