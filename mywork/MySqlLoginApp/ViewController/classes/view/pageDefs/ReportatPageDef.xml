@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.1.20" id="ReportatPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <iterator Binds="ReportView1" RangeSize="25" DataControl="AppModuleDataControl" id="ReportView1Iterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="ReportView1Iterator" id="ReportView1">
+      <nodeDefinition DefName="model.ReportView" Name="ReportView10">
+        <AttrNames>
+          <Item Value="UserId"/>
+          <Item Value="ReportId"/>
+          <Item Value="Description"/>
+          <Item Value="Type"/>
+          <Item Value="Imageurl"/>
+          <Item Value="Priority"/>
+          <Item Value="Latitude"/>
+          <Item Value="Longitude"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="ReportView1Iterator" id="ReportView11">
+      <nodeDefinition DefName="model.ReportView" Name="ReportView110">
+        <AttrNames>
+          <Item Value="UserId"/>
+          <Item Value="ReportId"/>
+          <Item Value="Description"/>
+          <Item Value="Type"/>
+          <Item Value="Imageurl"/>
+          <Item Value="Priority"/>
+          <Item Value="Latitude"/>
+          <Item Value="Longitude"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

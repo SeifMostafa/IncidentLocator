@@ -12,12 +12,12 @@
     <redirect/>
   </view>
   <view id="Reports">
-    <page>/PagesCreated/Reports.jspx</page>
+    <page>/Reports.jspx</page>
     <redirect/>
   </view>
   <view id="Feedbacks"></view>
   <view id="report">
-    <page>/PagesCreated/report.jspx</page>
+    <page>/report.jspx</page>
     <redirect/>
   </view>
     
@@ -33,12 +33,21 @@
       <fixed-outcome>ExecuteWithParams</fixed-outcome>
     </outcome>
   </method-call>
+  <method-call id="ExecuteWithParams1">
+    <method>#{bindings.ExecuteWithParams.execute}</method>
+    <outcome>
+      <fixed-outcome>ExecuteWithParams</fixed-outcome>
+    </outcome>
+  </method-call>
+  <method-call id="ExecuteWithParams2">
+    <method>#{bindings.ExecuteWithParams.execute}</method>
+    <outcome>
+      <fixed-outcome>ExecuteWithParams</fixed-outcome>
+    </outcome>
+  </method-call>
   <control-flow-rule id="__33">
     <from-activity-id>ExecuteWithParams</from-activity-id>
-    <control-flow-case id="__34">
-      <from-outcome>ExecuteWithParams</from-outcome>
-      <to-activity-id>Homegdeda</to-activity-id>
-    </control-flow-case>
+   
     <control-flow-case id="__2">
       <from-outcome>ExecuteWithParams</from-outcome>
       <to-activity-id>Home</to-activity-id>
@@ -80,15 +89,29 @@
     <from-activity-id>Home</from-activity-id>
     <control-flow-case id="__10">
       <from-outcome>getFeedbacks</from-outcome>
-      <to-activity-id>Feedbacks</to-activity-id>
+      <to-activity-id>ExecuteWithParams2</to-activity-id>
     </control-flow-case>
     <control-flow-case id="__18">
       <from-outcome>getReports</from-outcome>
-      <to-activity-id>Reports</to-activity-id>
+      <to-activity-id>ExecuteWithParams1</to-activity-id>
     </control-flow-case>
     <control-flow-case id="__20">
       <from-outcome>refresh</from-outcome>
       <to-activity-id>Home</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__21">
+    <from-activity-id>ExecuteWithParams2</from-activity-id>
+    <control-flow-case id="__22">
+      <from-outcome>ExecuteWithParams</from-outcome>
+      <to-activity-id>Feedbacks</to-activity-id>
+    </control-flow-case>
+  </control-flow-rule>
+  <control-flow-rule id="__8">
+    <from-activity-id>ExecuteWithParams1</from-activity-id>
+    <control-flow-case id="__23">
+      <from-outcome>ExecuteWithParams</from-outcome>
+      <to-activity-id>Reports</to-activity-id>
     </control-flow-case>
   </control-flow-rule>
   <managed-bean id="__1">
@@ -113,16 +136,24 @@
     <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/Home.jspx-->
   </managed-bean>
   
-  <managed-bean id="__32">
-    <managed-bean-name>backing_PagesCreated_Reports3</managed-bean-name>
-    <managed-bean-class>view.backing.PagesCreated.Reports</managed-bean-class>
-    <managed-bean-scope>backingBean</managed-bean-scope>
-    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/Reports.jspx-->
-  </managed-bean>
+  
   <managed-bean id="__17">
     <managed-bean-name>backing_PagesCreated_report</managed-bean-name>
     <managed-bean-class>view.backing.PagesCreated.Report</managed-bean-class>
     <managed-bean-scope>backingBean</managed-bean-scope>
     <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/report.jspx-->
+  </managed-bean>
+  
+  <managed-bean id="__24">
+    <managed-bean-name>backing_Reports</managed-bean-name>
+    <managed-bean-class>view.backing.Reports</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1Reports.jspx-->
+  </managed-bean>
+  <managed-bean id="__4">
+    <managed-bean-name>backing_report</managed-bean-name>
+    <managed-bean-class>view.backing.Report</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1report.jspx-->
   </managed-bean>
 </adfc-config>

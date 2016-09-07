@@ -4,14 +4,20 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="Reports1" RangeSize="25" DataControl="AppModuleDataControl" id="Reports1Iterator"/>
+    <iterator Binds="Reports1" RangeSize="25" DataControl="AppModuleDataControl" id="ReportView1Iterator"/>
   </executables>
   <bindings>
-    <tree IterBinding="Reports1Iterator" id="Reports1">
-      <nodeDefinition DefName="model.Reports" Name="Reports10">
+    <tree IterBinding="ReportView1Iterator" id="ReportView1">
+      <nodeDefinition DefName="model.ReportView" Name="ReportView10">
         <AttrNames>
+          <Item Value="UserId"/>
+          <Item Value="ReportId"/>
           <Item Value="Description"/>
+          <Item Value="Type"/>
+          <Item Value="Imageurl"/>
           <Item Value="Priority"/>
+          <Item Value="Latitude"/>
+          <Item Value="Longitude"/>
         </AttrNames>
       </nodeDefinition>
     </tree>
