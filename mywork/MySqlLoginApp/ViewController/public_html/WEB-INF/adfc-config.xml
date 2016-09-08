@@ -15,7 +15,9 @@
     <page>/Reports.jspx</page>
     <redirect/>
   </view>
-  <view id="Feedbacks"></view>
+  <view id="Feedbacks">
+    <page>/Feedbacks.jspx</page>
+  </view>
   <view id="report">
     <page>/report.jspx</page>
     <redirect/>
@@ -155,5 +157,11 @@
     <managed-bean-class>view.backing.Report</managed-bean-class>
     <managed-bean-scope>backingBean</managed-bean-scope>
     <!--oracle-jdev-comment:managed-bean-jsp-link:1report.jspx-->
+  </managed-bean>
+  <managed-bean id="__25">
+    <managed-bean-name>backing_Feedbacks</managed-bean-name>
+    <managed-bean-class>view.backing.Feedbacks</managed-bean-class>
+    <managed-bean-scope>backingBean</managed-bean-scope>
+    <!--oracle-jdev-comment:managed-bean-jsp-link:1Feedbacks.jspx-->
   </managed-bean>
 </adfc-config>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.1.20" id="FeedbacksPageDef"
+                Package="view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="FeedBackView1" RangeSize="25" DataControl="AppModuleDataControl" id="FeedBackView1Iterator"/>
+    <searchRegion Binds="FeedBackView1Iterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="FeedBackView1Query"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="FeedBackView1Iterator" id="FeedBackView1">
+      <nodeDefinition DefName="model.FeedBackView" Name="FeedBackView10">
+        <AttrNames>
+          <Item Value="Description"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

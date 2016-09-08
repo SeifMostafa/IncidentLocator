@@ -3,7 +3,7 @@
                 id="adfc_config___ExecuteWithParams2PageDef" Package="view.pageDefs" SkipValidation="true">
   <parameters/>
   <executables>
-    <iterator Binds="Reports1" RangeSize="25" DataControl="AppModuleDataControl" id="Reports1Iterator" Refresh="never"/>
+    <iterator Binds="FeedBackView1" RangeSize="25" DataControl="AppModuleDataControl" id="Reports1Iterator" Refresh="never"/>
   </executables>
   <bindings>
     <action IterBinding="Reports1Iterator" id="ExecuteWithParams" RequiresUpdateModel="true" Action="executeWithParams">

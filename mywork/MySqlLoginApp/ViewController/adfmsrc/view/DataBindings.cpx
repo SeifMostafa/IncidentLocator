@@ -27,6 +27,7 @@
     <page path="PageFlow#ExecuteWithParams2" usageId="view_adfc_config___ExecuteWithParams2PageDef"/>
     <page path="/Reports.jspx" usageId="view_ReportsPageDef11"/>
     <page path="/report.jspx" usageId="view_reportPageDef1"/>
+    <page path="/Feedbacks.jspx" usageId="view_FeedbacksPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="view_LoginPageDef" path="view.pageDefs.LoginPageDef"/>
@@ -52,6 +53,7 @@
           path="view.pageDefs.adfc_config___ExecuteWithParams2PageDef"/>
     <page id="view_ReportsPageDef11" path="view.pageDefs.ReportsPageDef1"/>
     <page id="view_reportPageDef1" path="view.pageDefs.reportPageDef"/>
+    <page id="view_FeedbacksPageDef" path="view.pageDefs.FeedbacksPageDef"/>
   </pageDefinitionUsages>
   <dataControlUsages>
     <BC4JDataControl id="AppModuleDataControl" Package="model"

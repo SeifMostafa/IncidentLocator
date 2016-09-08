@@ -69,11 +69,13 @@
       <property
          name="activityId">Feedbacks</property>
       <property
-         name="x">122.0</property>
+         name="x">199.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>Feedbacks&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
       <property
-         name="y">234.58594</property>
+         name="y">239.48242</property>
+      <property
+         name="page">/Feedbacks.jspx</property>
       <property
          name="exceptionHandler">false</property>
    </View>
@@ -127,7 +129,7 @@
       <property
          name="fromsrcid">__11</property>
       <property
-         name="sdm:polyPoints">B50,-223.0,297.93652,-216.0,353.44238,T50</property>
+         name="sdm:polyPoints">B50,-223.0,297.93652,-210.0,352.7412,T50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"
@@ -148,11 +150,11 @@
       <property
          name="activityId">filter</property>
       <property
-         name="x">-216.0</property>
+         name="x">-210.0</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>filter&lt;/b>&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
       <property
-         name="y">407.79297</property>
+         name="y">407.0918</property>
       <property
          name="exceptionHandler">false</property>
    </MethodCall>
@@ -164,7 +166,7 @@
       <property
          name="fromOutcome">ExecuteWithParams</property>
       <property
-         name="sdm:polyPoints">R50,-175.0,407.44238,-65.0,402.88477,L50</property>
+         name="sdm:polyPoints">R50,-169.0,406.7412,-65.0,402.88477,L50</property>
    </ControlFlowCase>
    <WildcardControlFlowRule
       id="WildcardControlFlowRule27">
@@ -285,7 +287,7 @@
       <property
          name="fromsrcid">__21</property>
       <property
-         name="sdm:polyPoints">R50,10.688477,234.39648,81.0,234.23535,L50</property>
+         name="sdm:polyPoints">R50,10.688477,234.39648,158.0,239.13184,L50</property>
    </ControlFlowCase>
    <ControlFlowCase
       islink="true"

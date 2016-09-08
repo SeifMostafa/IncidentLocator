@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Feedback"
+  Version="12.2.1.1.20"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="feedback"
+  AliasName="Feedback"
+  BindingStyle="JDBC">
+  <Attribute
+    Name="FeedbackId"
+    IsNotNull="true"
+    ColumnName="feedback_id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="feedback"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ReportId"
+    IsNotNull="true"
+    ColumnName="report_id"
+    SQLType="INTEGER"
+    Type="java.lang.Integer"
+    ColumnType="INT"
+    TableName="feedback">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Description"
+    IsNotNull="true"
+    Precision="255"
+    ColumnName="description"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR"
+    TableName="feedback">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="255"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="FeedbackPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="FEEDBACK_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.Feedback.FeedbackId"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="FeedbackIbfk1">
+    <DesignTime>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="feedback_ibfk_1"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="model.Feedback.ReportId"/>
+    </AttrArray>
+  </Key>
+</Entity>

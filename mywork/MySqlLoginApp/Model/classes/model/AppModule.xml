@@ -31,4 +31,11 @@
       Name="ReportViewIDCriteria"
       FullName="model.ReportViewID.ReportViewIDCriteria"/>
   </ViewUsage>
+  <ViewUsage
+    Name="FeedBackView1"
+    ViewObjectName="model.FeedBackView">
+    <ViewCriteriaUsage
+      Name="FeedBackViewCriteria"
+      FullName="model.FeedBackView.FeedBackViewCriteria"/>
+  </ViewUsage>
 </AppModule>
