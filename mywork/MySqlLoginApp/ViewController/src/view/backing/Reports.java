@@ -70,6 +70,10 @@ public String dDo() {
     DCIteratorBinding iterBind= (DCIteratorBinding)dcBindings.get("Reports1Iterator");
    
     ADFUtil.setEL("#{sessionScope.reportid}", iterBind.getCurrentRow().getAttribute("ReportId"));
+    //ADFUtil.setEL("#{sessionScope.lat}", iterBind.getCurrentRow().getAttribute("Latitude"));
+    //ADFUtil.setEL("#{sessionScope.long}", iterBind.getCurrentRow().getAttribute("Longitude"));
+
+
 return "getReport";
    
 }

@@ -72,4 +72,17 @@
     EntityAttrName="Longitude"
     EntityUsage="report"
     AliasName="longitude"/>
+  <ViewAttribute
+    Name="Typeid"
+    PrecisionRule="true"
+    EntityAttrName="Typeid"
+    EntityUsage="report"
+    AliasName="TypeID"/>
+  <ViewAttribute
+    Name="Solved"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Solved"
+    EntityUsage="report"
+    AliasName="solved"/>
 </ViewObject>

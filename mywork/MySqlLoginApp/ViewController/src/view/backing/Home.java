@@ -1,8 +1,13 @@
 package view.backing;
 
+import oracle.adf.model.BindingContext;
+import oracle.adf.model.binding.DCBindingContainer;
+import oracle.adf.model.binding.DCIteratorBinding;
 import oracle.adf.view.faces.bi.component.geoMap.UIGeoMap;
+import oracle.adf.view.faces.bi.event.MapSelectionEvent;
 import oracle.adf.view.rich.component.rich.RichDocument;
 import oracle.adf.view.rich.component.rich.RichForm;
+import oracle.adf.view.rich.component.rich.input.RichInputText;
 import oracle.adf.view.rich.component.rich.layout.RichGridCell;
 import oracle.adf.view.rich.component.rich.layout.RichGridRow;
 import oracle.adf.view.rich.component.rich.layout.RichPanelFormLayout;
@@ -12,6 +17,12 @@ import oracle.adf.view.rich.component.rich.layout.RichPanelSplitter;
 import oracle.adf.view.rich.component.rich.nav.RichButton;
 import oracle.adf.view.rich.component.rich.output.RichMessages;
 import oracle.adf.view.rich.component.rich.output.RichOutputText;
+
+import oracle.binding.OperationBinding;
+
+import oracle.jbo.Row;
+
+import view.util.ADFUtil;
 
 public class Home {
     private RichPanelGroupLayout pgl1;
@@ -31,6 +42,8 @@ public class Home {
     private RichMessages m1;
     private UIGeoMap map;
     private RichOutputText ot1;
+    private RichInputText it1;
+
     
     
     public void setPgl1(RichPanelGroupLayout pgl1) {
@@ -171,5 +184,50 @@ public class Home {
     }
     public String FellMap() {
         return null;
+    }
+
+    public String SelectionLis(MapSelectionEvent mapSelectionEvent) {
+
+        DCIteratorBinding itr = ADFUtil.findIterator("ReportViewID1Iterator");
+                     
+                     OperationBinding opr = ADFUtil.findOperation("ExecuteWithParams");
+                     opr.getParamsMap().put("pReportid", it1.getValue());/// 3wz ashel it1 w a7t 7aga ml map xD
+                                 opr.execute();
+                                 
+        Row currentRow = itr.getCurrentRow();
+
+        
+        
+        ADFUtil.setEL("#{sessionScope.reportid}", it1.getValue());
+        ADFUtil.setEL("#{sessionScope.lat}", currentRow.getAttribute("Latitude"));
+        ADFUtil.setEL("#{sessionScope.long}", currentRow.getAttribute("Longitude"));
+                
+        return "GetReport";
+    }
+
+    public String b5_action() {
+        DCIteratorBinding itr = ADFUtil.findIterator("ReportViewID1Iterator");
+                     
+                     OperationBinding opr = ADFUtil.findOperation("ExecuteWithParams");
+                     opr.getParamsMap().put("pReportid", it1.getValue());
+                                 opr.execute();
+                                 
+        Row currentRow = itr.getCurrentRow();
+
+        
+        
+        ADFUtil.setEL("#{sessionScope.reportid}", it1.getValue());
+        ADFUtil.setEL("#{sessionScope.lat}", currentRow.getAttribute("Latitude"));
+        ADFUtil.setEL("#{sessionScope.long}", currentRow.getAttribute("Longitude"));
+                
+        return "GetReport";
+    }
+
+    public void setIt1(RichInputText it1) {
+        this.it1 = it1;
+    }
+
+    public RichInputText getIt1() {
+        return it1;
     }
 }

@@ -101,6 +101,10 @@
       <from-outcome>refresh</from-outcome>
       <to-activity-id>Home</to-activity-id>
     </control-flow-case>
+    <control-flow-case id="__26">
+      <from-outcome>GetReport</from-outcome>
+      <to-activity-id>filter</to-activity-id>
+    </control-flow-case>
   </control-flow-rule>
   <control-flow-rule id="__21">
     <from-activity-id>ExecuteWithParams2</from-activity-id>

@@ -4,27 +4,22 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
-    <iterator Binds="ReportView1" RangeSize="-1" DataControl="AppModuleDataControl" id="ReportView1Iterator"/>
-    <iterator Binds="ReportView2_1" RangeSize="-1" DataControl="AppModuleDataControl" id="ReportView2_1Iterator"/>
     <iterator Binds="Reports1" RangeSize="-1" DataControl="AppModuleDataControl" id="Reports1Iterator"/>
+    <iterator id="ReportViewID1Iterator" Binds="ReportViewID1" DataControl="AppModuleDataControl" RangeSize="25"/>
   </executables>
   <bindings>
-    <mapTheme IterBinding="ReportView1Iterator" id="ReportView1" xmlns="http://xmlns.oracle.com/adfm/dvt">
-      <mapThemeDataMap convert="false" mapThemeType="point">
-        <item type="lat_long" longitude="Longitude" latitude="Latitude"/>
-      </mapThemeDataMap>
-    </mapTheme>
-    <mapTheme IterBinding="ReportView2_1Iterator" id="ReportView2_1" xmlns="http://xmlns.oracle.com/adfm/dvt">
-      <mapThemeDataMap convert="false" mapThemeType="point">
-        <item type="lat_long" longitude="Longitude" latitude="Latitude" label="Description"/>
-        <item type="category" value="Type"/>
-      </mapThemeDataMap>
-    </mapTheme>
     <mapTheme IterBinding="Reports1Iterator" id="Reports1" xmlns="http://xmlns.oracle.com/adfm/dvt">
       <mapThemeDataMap convert="false" mapThemeType="point">
         <item type="lat_long" longitude="Longitude" latitude="Latitude" label="Description"/>
         <item type="category" value="Type"/>
+        <data>
+          <item value="ReportId"/>
+        </data>
       </mapThemeDataMap>
     </mapTheme>
+    <action IterBinding="ReportViewID1Iterator" id="ExecuteWithParams" InstanceName="AppModuleDataControl.ReportViewID1"
+            DataControl="AppModuleDataControl" RequiresUpdateModel="true" Action="executeWithParams">
+      <NamedData NDName="pReportid" NDValue="#{sessionScope.reportid}" NDType="java.lang.Integer"/>
+    </action>
   </bindings>
 </pageDefinition>

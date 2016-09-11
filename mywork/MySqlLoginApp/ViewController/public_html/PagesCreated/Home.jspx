@@ -1,6 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
-          xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces">
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich" xmlns:dvt="http://xmlns.oracle.com/dss/adf/faces"
+          xmlns:h="http://java.sun.com/jsf/html">
     <jsp:directive.page contentType="text/html;charset=UTF-8"/>
     <f:view>
         <af:document title="Home.jspx" id="d1" binding="#{backingBeanScope.backing_Home.d1}">
@@ -24,6 +25,9 @@
                                        action="getFeedbacks"/>
                             <af:button text="About us" id="b2" binding="#{backingBeanScope.backing_Home.b2}"
                                        inlineStyle="color:#800000; font-family:times; font-size:larger; font-variant:petite-caps; font-variant-caps:titling-caps; background-color:#808080; background-origin:content-box; border-left-width:medium; border-left-style:groove;width:100%px"/>
+ 
+                  
+                        
                         </af:panelFormLayout>
                     </f:facet>
                     <f:facet name="second">
@@ -32,9 +36,12 @@
                                 <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1"
                                              binding="#{backingBeanScope.backing_Home.gc1}"
                                              inlineStyle='src="C:\\Users\\Emy1\\Desktop\\MySqlLoginApp\\ViewController\\public_html\\image\\logo2.png" alt="Mountain View" style="width:204px;height:28px;'>
-                                    <!-- Partial Header -->
-                                    <af:outputText value="#{sessionScope.type}" id="ot1"
-                                                   binding="#{backingBeanScope.backing_Home.ot1}"/>
+                                   
+                                    <!-- my  work  -->
+                            
+                                    <af:inputText label="Enter Report ID" id="it1" binding="#{backingBeanScope.backing_Home.it1}"/>
+                                    <af:button text="GO" id="b5" action="#{backingBeanScope.backing_Home.b5_action}"/>
+                                    
                                 </af:gridCell>
                             </af:gridRow>
                             <af:gridRow height="100%" id="gr2" binding="#{backingBeanScope.backing_Home.gr2}">
@@ -43,12 +50,12 @@
                                     <af:panelGroupLayout layout="scroll" id="pgl1"
                                                          binding="#{backingBeanScope.backing_Home.pgl1}"
                                                          inlineStyle="background-color:Maroon;">
+
                                         <!-- Content -->
                                         <dvt:map id="map" startingX="26.8206" mapServerConfigId="mapConfig1"
                                                  baseMapName="ELOCATION.BI_WORLD_MAP_LIGHT" mapZoom="3"
                                                  inlineStyle="width:1366px; height:600px;" startingY="30.8025">
-                                            <dvt:mapPointTheme id="mt1" value="#{bindings.Reports1.geoMapModel}"
-                                                  clickAction="goLogin" leftClickBehavior="Action">
+                                            <dvt:mapPointTheme id="mt1" value="#{bindings.Reports1.geoMapModel}">
                                             <dvt:mapPointStyleItem id="mpsi11" itemValue="fire" imageURL="/pictures/fire.png"/>
                         <dvt:mapPointStyleItem id="mpsi22" itemValue="road"
                                                imageURL="/pictures/road.png"/>
@@ -67,4 +74,5 @@
         </af:document>
     </f:view>
     <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_untitled1-->
+    <!--oracle-jdev-comment:preferred-managed-bean-name:backing_Home-->
 </jsp:root>

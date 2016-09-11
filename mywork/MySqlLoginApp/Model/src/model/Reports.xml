@@ -82,6 +82,19 @@
     EntityAttrName="UserId"
     EntityUsage="report"
     AliasName="user_id"/>
+  <ViewAttribute
+    Name="Typeid"
+    PrecisionRule="true"
+    EntityAttrName="Typeid"
+    EntityUsage="report"
+    AliasName="TypeID"/>
+  <ViewAttribute
+    Name="Solved"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Solved"
+    EntityUsage="report"
+    AliasName="solved"/>
   <ViewCriteria
     Name="ReportsCriteria"
     ViewObjectName="model.Reports"
