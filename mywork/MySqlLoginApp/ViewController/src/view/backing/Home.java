@@ -190,11 +190,14 @@ public class Home {
 
         DCIteratorBinding itr = ADFUtil.findIterator("ReportViewID1Iterator");
                      
-                     OperationBinding opr = ADFUtil.findOperation("ExecuteWithParams");
-                     opr.getParamsMap().put("pReportid", it1.getValue());/// 3wz ashel it1 w a7t 7aga ml map xD
-                                 opr.execute();
+//                     OperationBinding opr = ADFUtil.findOperation("ExecuteWithParams");
+//                     opr.getParamsMap().put("pReportid", it1.getValue());/// 3wz ashel it1 w a7t 7aga ml map xD
+//                                 opr.execute();
                                  
         Row currentRow = itr.getCurrentRow();
+        if(currentRow != null) {
+            oracle.jbo.domain.Number id = (oracle.jbo.domain.Number)currentRow.getAttribute("ReportId");
+        }
 
         
         
@@ -229,5 +232,42 @@ public class Home {
 
     public RichInputText getIt1() {
         return it1;
+    }
+
+    public void mapSL(MapSelectionEvent mapSelectionEvent) {
+        // Add event code here...
+        DCIteratorBinding itr = ADFUtil.findIterator("ReportViewID1Iterator");
+                     
+        //                     OperationBinding opr = ADFUtil.findOperation("ExecuteWithParams");
+        //                     opr.getParamsMap().put("pReportid", it1.getValue());/// 3wz ashel it1 w a7t 7aga ml map xD
+        //                                 opr.execute();
+                                 
+        Row currentRow = itr.getCurrentRow();
+        if(currentRow != null) {
+            oracle.jbo.domain.Number id = (oracle.jbo.domain.Number)currentRow.getAttribute("ReportId");
+        }
+
+        
+        
+        ADFUtil.setEL("#{sessionScope.reportid}", it1.getValue());
+        ADFUtil.setEL("#{sessionScope.lat}", currentRow.getAttribute("Latitude"));
+        ADFUtil.setEL("#{sessionScope.long}", currentRow.getAttribute("Longitude"));
+    }
+
+    public String checkId() {
+        // Add event code here...
+        DCIteratorBinding itr = ADFUtil.findIterator("ReportViewID1Iterator");
+                     
+        //                     OperationBinding opr = ADFUtil.findOperation("ExecuteWithParams");
+        //                     opr.getParamsMap().put("pReportid", it1.getValue());/// 3wz ashel it1 w a7t 7aga ml map xD
+        //                                 opr.execute();
+                                 
+        Row currentRow = itr.getCurrentRow();
+        Integer id;
+        if(currentRow != null) {
+             id = (Integer)currentRow.getAttribute("ReportId");
+             System.out.println("Id = " + id);
+        }
+        return null;
     }
 }

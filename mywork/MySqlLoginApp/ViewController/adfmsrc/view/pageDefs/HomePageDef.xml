@@ -12,9 +12,6 @@
       <mapThemeDataMap convert="false" mapThemeType="point">
         <item type="lat_long" longitude="Longitude" latitude="Latitude" label="Description"/>
         <item type="category" value="Type"/>
-        <data>
-          <item value="ReportId"/>
-        </data>
       </mapThemeDataMap>
     </mapTheme>
     <action IterBinding="ReportViewID1Iterator" id="ExecuteWithParams" InstanceName="AppModuleDataControl.ReportViewID1"

@@ -14,9 +14,7 @@
                         <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_Home.pfl1}"
                                             inlineStyle="border-left-style:groove;background-color: #DCDCDC;   width: 150px;  ; ">
                             <f:facet name="footer"/>
-                            <af:button text="Home" id="b1" binding="#{backingBeanScope.backing_Home.b1}"
-                                       inlineStyle="color:#800000; font-family:times; font-size:larger; font-variant:petite-caps; font-variant-caps:titling-caps; background-color:#808080; background-origin:content-box; border-left-width:medium; border-left-style:groove;"
-                                       action="refresh"/>
+                             
                             <af:button text="Reports" id="b3" binding="#{backingBeanScope.backing_Home.b3}"
                                        inlineStyle="color:#800000; font-family:times; font-size:larger; font-variant:petite-caps; font-variant-caps:titling-caps; background-color:#808080; background-origin:content-box; border-left-width:medium; border-left-style:groove;"
                                        action="getReports"/>
@@ -54,8 +52,12 @@
                                         <!-- Content -->
                                         <dvt:map id="map" startingX="26.8206" mapServerConfigId="mapConfig1"
                                                  baseMapName="ELOCATION.BI_WORLD_MAP_LIGHT" mapZoom="3"
-                                                 inlineStyle="width:1366px; height:600px;" startingY="30.8025">
-                                            <dvt:mapPointTheme id="mt1" value="#{bindings.Reports1.geoMapModel}">
+                                                 inlineStyle="width:1366px; height:600px;" startingY="30.8025"
+                                                 selectionListener="#{backingBeanScope.backing_Home.mapSL}">
+                                            <dvt:mapPointTheme id="mt1" value="#{bindings.Reports1.geoMapModel}"
+                                                               clickAction="#{backingBeanScope.backing_Home.checkId}"
+                                                               leftClickBehavior="Action"
+                                                               selectionListener="#{backingBeanScope.backing_Home.mapSL}">
                                             <dvt:mapPointStyleItem id="mpsi11" itemValue="fire" imageURL="/pictures/fire.png"/>
                         <dvt:mapPointStyleItem id="mpsi22" itemValue="road"
                                                imageURL="/pictures/road.png"/>
