@@ -1,10 +1,23 @@
 package view.backing;
 
+
+import java.util.Iterator;
+
+import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
+
+import javax.servlet.http.HttpServletRequest;
+
+import javax.servlet.http.HttpSession;
+
 import oracle.adf.model.BindingContext;
 import oracle.adf.model.binding.DCBindingContainer;
 import oracle.adf.model.binding.DCIteratorBinding;
+import oracle.adf.view.faces.bi.component.geoMap.DataContent;
 import oracle.adf.view.faces.bi.component.geoMap.UIGeoMap;
+import oracle.adf.view.faces.bi.event.MapClickActionEvent;
 import oracle.adf.view.faces.bi.event.MapSelectionEvent;
+import oracle.adf.view.faces.bi.model.GeoObject;
 import oracle.adf.view.rich.component.rich.RichDocument;
 import oracle.adf.view.rich.component.rich.RichForm;
 import oracle.adf.view.rich.component.rich.input.RichInputText;
@@ -43,6 +56,8 @@ public class Home {
     private UIGeoMap map;
     private RichOutputText ot1;
     private RichInputText it1;
+    GeoObject g1;
+
 
     
     
@@ -182,50 +197,9 @@ public class Home {
     public RichOutputText getOt1() {
         return ot1;
     }
-    public String FellMap() {
-        return null;
-    }
+   
 
-    public String SelectionLis(MapSelectionEvent mapSelectionEvent) {
-
-        DCIteratorBinding itr = ADFUtil.findIterator("ReportViewID1Iterator");
-                     
-//                     OperationBinding opr = ADFUtil.findOperation("ExecuteWithParams");
-//                     opr.getParamsMap().put("pReportid", it1.getValue());/// 3wz ashel it1 w a7t 7aga ml map xD
-//                                 opr.execute();
-                                 
-        Row currentRow = itr.getCurrentRow();
-        if(currentRow != null) {
-            oracle.jbo.domain.Number id = (oracle.jbo.domain.Number)currentRow.getAttribute("ReportId");
-        }
-
-        
-        
-        ADFUtil.setEL("#{sessionScope.reportid}", it1.getValue());
-        ADFUtil.setEL("#{sessionScope.lat}", currentRow.getAttribute("Latitude"));
-        ADFUtil.setEL("#{sessionScope.long}", currentRow.getAttribute("Longitude"));
-                
-        return "GetReport";
-    }
-
-    public String b5_action() {
-        DCIteratorBinding itr = ADFUtil.findIterator("ReportViewID1Iterator");
-                     
-                     OperationBinding opr = ADFUtil.findOperation("ExecuteWithParams");
-                     opr.getParamsMap().put("pReportid", it1.getValue());
-                                 opr.execute();
-                                 
-        Row currentRow = itr.getCurrentRow();
-
-        
-        
-        ADFUtil.setEL("#{sessionScope.reportid}", it1.getValue());
-        ADFUtil.setEL("#{sessionScope.lat}", currentRow.getAttribute("Latitude"));
-        ADFUtil.setEL("#{sessionScope.long}", currentRow.getAttribute("Longitude"));
-                
-        return "GetReport";
-    }
-
+   
     public void setIt1(RichInputText it1) {
         this.it1 = it1;
     }
@@ -234,40 +208,30 @@ public class Home {
         return it1;
     }
 
-    public void mapSL(MapSelectionEvent mapSelectionEvent) {
-        // Add event code here...
-        DCIteratorBinding itr = ADFUtil.findIterator("ReportViewID1Iterator");
-                     
-        //                     OperationBinding opr = ADFUtil.findOperation("ExecuteWithParams");
-        //                     opr.getParamsMap().put("pReportid", it1.getValue());/// 3wz ashel it1 w a7t 7aga ml map xD
-        //                                 opr.execute();
-                                 
-        Row currentRow = itr.getCurrentRow();
-        if(currentRow != null) {
-            oracle.jbo.domain.Number id = (oracle.jbo.domain.Number)currentRow.getAttribute("ReportId");
-        }
+    
+    
+    public void processMouseClick(MapClickActionEvent mapClickActionEvent) {
+                if (mapClickActionEvent.getDataContent() != null)
+                {
+                    DataContent dt = mapClickActionEvent.getDataContent();
+                    String  loc=dt.getLocationName();
+                loc = loc.substring(loc.indexOf(".Report#:")+9);
+                //System.out.println(loc);
+                FacesContext ectx = FacesContext.getCurrentInstance();
+                HttpServletRequest request = (HttpServletRequest)ectx.getExternalContext().getRequest();
+                HttpSession httpSession = request.getSession();
 
-        
-        
-        ADFUtil.setEL("#{sessionScope.reportid}", it1.getValue());
-        ADFUtil.setEL("#{sessionScope.lat}", currentRow.getAttribute("Latitude"));
-        ADFUtil.setEL("#{sessionScope.long}", currentRow.getAttribute("Longitude"));
-    }
+                    ADFUtil.setEL("#{sessionScope.reportid}", Integer.valueOf(loc));
+                    //System.out.println(httpSession.getAttribute("reportid"));
+                    ActionEvent actionEvent = new ActionEvent(b1);
+                    actionEvent.queue();
+                }
+                        
+                
+           }
 
-    public String checkId() {
-        // Add event code here...
-        DCIteratorBinding itr = ADFUtil.findIterator("ReportViewID1Iterator");
-                     
-        //                     OperationBinding opr = ADFUtil.findOperation("ExecuteWithParams");
-        //                     opr.getParamsMap().put("pReportid", it1.getValue());/// 3wz ashel it1 w a7t 7aga ml map xD
-        //                                 opr.execute();
-                                 
-        Row currentRow = itr.getCurrentRow();
-        Integer id;
-        if(currentRow != null) {
-             id = (Integer)currentRow.getAttribute("ReportId");
-             System.out.println("Id = " + id);
-        }
-        return null;
+    public String b5_action() {
+        
+       return "GetReport";
     }
 }

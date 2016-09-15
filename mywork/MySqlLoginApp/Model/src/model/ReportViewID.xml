@@ -27,6 +27,13 @@
     Name="report"
     Entity="model.report"/>
   <ViewAttribute
+    Name="Descid"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Descid"
+    EntityUsage="report"
+    AliasName="DescID"/>
+  <ViewAttribute
     Name="Description"
     IsNotNull="true"
     PrecisionRule="true"
@@ -69,6 +76,20 @@
     EntityUsage="report"
     AliasName="report_id"/>
   <ViewAttribute
+    Name="Solved"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Solved"
+    EntityUsage="report"
+    AliasName="solved"/>
+  <ViewAttribute
+    Name="Time"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Time"
+    EntityUsage="report"
+    AliasName="Time"/>
+  <ViewAttribute
     Name="Type"
     IsNotNull="true"
     PrecisionRule="true"
@@ -82,19 +103,6 @@
     EntityAttrName="UserId"
     EntityUsage="report"
     AliasName="user_id"/>
-  <ViewAttribute
-    Name="Solved"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Solved"
-    EntityUsage="report"
-    AliasName="solved"/>
-  <ViewAttribute
-    Name="Typeid"
-    PrecisionRule="true"
-    EntityAttrName="Typeid"
-    EntityUsage="report"
-    AliasName="TypeID"/>
   <ViewCriteria
     Name="ReportViewIDCriteria"
     ViewObjectName="model.ReportViewID"
@@ -127,8 +135,8 @@
         Operator="="
         Conjunction="AND"
         Value=":pReportid"
-        IsBindVarValue="true"
-        Required="Optional"/>
+        Required="Optional"
+        IsBindVarValue="true"/>
     </ViewCriteriaRow>
   </ViewCriteria>
   <ResourceBundle>

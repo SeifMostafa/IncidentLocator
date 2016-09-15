@@ -83,18 +83,26 @@
     EntityUsage="report"
     AliasName="user_id"/>
   <ViewAttribute
-    Name="Typeid"
-    PrecisionRule="true"
-    EntityAttrName="Typeid"
-    EntityUsage="report"
-    AliasName="TypeID"/>
-  <ViewAttribute
     Name="Solved"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="Solved"
     EntityUsage="report"
     AliasName="solved"/>
+  <ViewAttribute
+    Name="Descid"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Descid"
+    EntityUsage="report"
+    AliasName="DescID"/>
+  <ViewAttribute
+    Name="Time"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Time"
+    EntityUsage="report"
+    AliasName="Time"/>
   <ViewCriteria
     Name="ReportsCriteria"
     ViewObjectName="model.Reports"

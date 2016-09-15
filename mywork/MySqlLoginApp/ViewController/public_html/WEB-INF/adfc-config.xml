@@ -143,12 +143,7 @@
   </managed-bean>
   
   
-  <managed-bean id="__17">
-    <managed-bean-name>backing_PagesCreated_report</managed-bean-name>
-    <managed-bean-class>view.backing.PagesCreated.Report</managed-bean-class>
-    <managed-bean-scope>backingBean</managed-bean-scope>
-    <!--oracle-jdev-comment:managed-bean-jsp-link:1PagesCreated/report.jspx-->
-  </managed-bean>
+  
   
   <managed-bean id="__24">
     <managed-bean-name>backing_Reports</managed-bean-name>
@@ -168,4 +163,5 @@
     <managed-bean-scope>backingBean</managed-bean-scope>
     <!--oracle-jdev-comment:managed-bean-jsp-link:1Feedbacks.jspx-->
   </managed-bean>
+ 
 </adfc-config>

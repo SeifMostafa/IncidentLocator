@@ -123,17 +123,26 @@
     </DesignTime>
   </Attribute>
   <Attribute
-    Name="Typeid"
-    Precision="20"
-    ColumnName="TypeID"
+    Name="Descid"
+    IsNotNull="true"
+    Precision="300"
+    ColumnName="DescID"
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR"
     TableName="report">
     <DesignTime>
-      <Attr Name="_DisplaySize" Value="20"/>
+      <Attr Name="_DisplaySize" Value="300"/>
     </DesignTime>
   </Attribute>
+  <Attribute
+    Name="Time"
+    IsNotNull="true"
+    ColumnName="Time"
+    SQLType="TIMESTAMP"
+    Type="java.sql.Timestamp"
+    ColumnType="DATETIME"
+    TableName="report"/>
   <Key
     Name="Primary1"
     PrimaryKey="true">

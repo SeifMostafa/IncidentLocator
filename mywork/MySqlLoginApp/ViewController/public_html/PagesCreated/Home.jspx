@@ -14,7 +14,6 @@
                         <af:panelFormLayout id="pfl1" binding="#{backingBeanScope.backing_Home.pfl1}"
                                             inlineStyle="border-left-style:groove;background-color: #DCDCDC;   width: 150px;  ; ">
                             <f:facet name="footer"/>
-                             
                             <af:button text="Reports" id="b3" binding="#{backingBeanScope.backing_Home.b3}"
                                        inlineStyle="color:#800000; font-family:times; font-size:larger; font-variant:petite-caps; font-variant-caps:titling-caps; background-color:#808080; background-origin:content-box; border-left-width:medium; border-left-style:groove;"
                                        action="getReports"/>
@@ -23,9 +22,6 @@
                                        action="getFeedbacks"/>
                             <af:button text="About us" id="b2" binding="#{backingBeanScope.backing_Home.b2}"
                                        inlineStyle="color:#800000; font-family:times; font-size:larger; font-variant:petite-caps; font-variant-caps:titling-caps; background-color:#808080; background-origin:content-box; border-left-width:medium; border-left-style:groove;width:100%px"/>
- 
-                  
-                        
                         </af:panelFormLayout>
                     </f:facet>
                     <f:facet name="second">
@@ -33,13 +29,10 @@
                             <af:gridRow height="50px" id="gr1" binding="#{backingBeanScope.backing_Home.gr1}">
                                 <af:gridCell width="100%" halign="stretch" valign="stretch" id="gc1"
                                              binding="#{backingBeanScope.backing_Home.gc1}"
-                                             inlineStyle='src="C:\\Users\\Emy1\\Desktop\\MySqlLoginApp\\ViewController\\public_html\\image\\logo2.png" alt="Mountain View" style="width:204px;height:28px;'>
-                                   
+                                             inlineStyle='src="C:\\\\Users\\\\Emy1\\\\Desktop\\\\MySqlLoginApp\\\\ViewController\\\\public_html\\\\image\\\\logo2.png" alt="Mountain View" style="width:204px;height:28px;'>
                                     <!-- my  work  -->
-                            
-                                    <af:inputText label="Enter Report ID" id="it1" binding="#{backingBeanScope.backing_Home.it1}"/>
-                                    <af:button text="GO" id="b5" action="#{backingBeanScope.backing_Home.b5_action}"/>
-                                    
+                                    <af:button text="GO" id="b5" binding="#{backingBeanScope.backing_Home.b1}" action="#{backingBeanScope.backing_Home.b5_action}"
+                                               visible="false"/>
                                 </af:gridCell>
                             </af:gridRow>
                             <af:gridRow height="100%" id="gr2" binding="#{backingBeanScope.backing_Home.gr2}">
@@ -48,23 +41,22 @@
                                     <af:panelGroupLayout layout="scroll" id="pgl1"
                                                          binding="#{backingBeanScope.backing_Home.pgl1}"
                                                          inlineStyle="background-color:Maroon;">
-
                                         <!-- Content -->
                                         <dvt:map id="map" startingX="26.8206" mapServerConfigId="mapConfig1"
                                                  baseMapName="ELOCATION.BI_WORLD_MAP_LIGHT" mapZoom="3"
-                                                 inlineStyle="width:1366px; height:600px;" startingY="30.8025"
-                                                 selectionListener="#{backingBeanScope.backing_Home.mapSL}">
+                                                 inlineStyle="width:1366px; height:600px;" startingY="30.8025">
                                             <dvt:mapPointTheme id="mt1" value="#{bindings.Reports1.geoMapModel}"
-                                                               clickAction="#{backingBeanScope.backing_Home.checkId}"
                                                                leftClickBehavior="Action"
-                                                               selectionListener="#{backingBeanScope.backing_Home.mapSL}">
-                                            <dvt:mapPointStyleItem id="mpsi11" itemValue="fire" imageURL="/pictures/fire.png"/>
-                        <dvt:mapPointStyleItem id="mpsi22" itemValue="road"
-                                               imageURL="/pictures/road.png"/>
-                        <dvt:mapPointStyleItem id="mpsi33" itemValue="ambulance" imageURL="/pictures/ambulance.png"/>
-                        <dvt:mapPointStyleItem id="mpsi44" itemValue="police" imageURL="/pictures/police.png"/>
+                                                               clickListener="#{backingBeanScope.backing_Home.processMouseClick}">
+                                                <dvt:mapPointStyleItem id="mpsi11" itemValue="fire"
+                                                                       imageURL="/pictures/fire.png"/>
+                                                <dvt:mapPointStyleItem id="mpsi22" itemValue="road"
+                                                                       imageURL="/pictures/road.png"/>
+                                                <dvt:mapPointStyleItem id="mpsi33" itemValue="ambulance"
+                                                                       imageURL="/pictures/ambulance.png"/>
+                                                <dvt:mapPointStyleItem id="mpsi44" itemValue="police"
+                                                                       imageURL="/pictures/police.png"/>
                                             </dvt:mapPointTheme>
-                                            
                                         </dvt:map>
                                     </af:panelGroupLayout>
                                 </af:gridCell>
@@ -75,6 +67,4 @@
             </af:form>
         </af:document>
     </f:view>
-    <!--oracle-jdev-comment:auto-binding-backing-bean-name:backing_untitled1-->
-    <!--oracle-jdev-comment:preferred-managed-bean-name:backing_Home-->
 </jsp:root>

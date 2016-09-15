@@ -64,12 +64,15 @@ public class Reports {
         return b1;
     }
 public String dDo() {
-    DCBindingContainer dcBindings = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
+   // DCBindingContainer dcBindings = (DCBindingContainer)BindingContext.getCurrent().getCurrentBindingsEntry();
 
     // Get a attribute value of the current row of iterator
-    DCIteratorBinding iterBind= (DCIteratorBinding)dcBindings.get("Reports1Iterator");
-   
-    ADFUtil.setEL("#{sessionScope.reportid}", iterBind.getCurrentRow().getAttribute("ReportId"));
+    //DCIteratorBinding iterBind= (DCIteratorBinding)dcBindings.get("Reports1Iterator");
+    Row selectedRow =   (Row)ADFUtil.evaluateEL("#{bindings.Reports1Iterator.currentRow}");
+    //ADFUtil.setEL("#{sessionScope.reportid}", iterBind.getCurrentRow().getAttribute("ReportId"));
+    //System.out.println( iterBind.getCurrentRow().getAttribute("ReportId"));
+    System.out.println( selectedRow.getAttribute("ReportId"));
+
     //ADFUtil.setEL("#{sessionScope.lat}", iterBind.getCurrentRow().getAttribute("Latitude"));
     //ADFUtil.setEL("#{sessionScope.long}", iterBind.getCurrentRow().getAttribute("Longitude"));
 

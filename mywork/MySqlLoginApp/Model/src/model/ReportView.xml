@@ -17,19 +17,12 @@
     Name="report"
     Entity="model.report"/>
   <ViewAttribute
-    Name="UserId"
+    Name="Descid"
     IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="UserId"
+    EntityAttrName="Descid"
     EntityUsage="report"
-    AliasName="user_id"/>
-  <ViewAttribute
-    Name="ReportId"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="ReportId"
-    EntityUsage="report"
-    AliasName="report_id"/>
+    AliasName="DescID"/>
   <ViewAttribute
     Name="Description"
     IsNotNull="true"
@@ -38,26 +31,12 @@
     EntityUsage="report"
     AliasName="description"/>
   <ViewAttribute
-    Name="Type"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Type"
-    EntityUsage="report"
-    AliasName="type"/>
-  <ViewAttribute
     Name="Imageurl"
     IsNotNull="true"
     PrecisionRule="true"
     EntityAttrName="Imageurl"
     EntityUsage="report"
     AliasName="imageUrl"/>
-  <ViewAttribute
-    Name="Priority"
-    IsNotNull="true"
-    PrecisionRule="true"
-    EntityAttrName="Priority"
-    EntityUsage="report"
-    AliasName="priority"/>
   <ViewAttribute
     Name="Latitude"
     IsNotNull="true"
@@ -73,11 +52,19 @@
     EntityUsage="report"
     AliasName="longitude"/>
   <ViewAttribute
-    Name="Typeid"
+    Name="Priority"
+    IsNotNull="true"
     PrecisionRule="true"
-    EntityAttrName="Typeid"
+    EntityAttrName="Priority"
     EntityUsage="report"
-    AliasName="TypeID"/>
+    AliasName="priority"/>
+  <ViewAttribute
+    Name="ReportId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="ReportId"
+    EntityUsage="report"
+    AliasName="report_id"/>
   <ViewAttribute
     Name="Solved"
     IsNotNull="true"
@@ -85,4 +72,25 @@
     EntityAttrName="Solved"
     EntityUsage="report"
     AliasName="solved"/>
+  <ViewAttribute
+    Name="Time"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Time"
+    EntityUsage="report"
+    AliasName="Time"/>
+  <ViewAttribute
+    Name="Type"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Type"
+    EntityUsage="report"
+    AliasName="type"/>
+  <ViewAttribute
+    Name="UserId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="UserId"
+    EntityUsage="report"
+    AliasName="user_id"/>
 </ViewObject>
